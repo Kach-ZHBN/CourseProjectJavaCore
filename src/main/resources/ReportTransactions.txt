@@ -1,0 +1,16 @@
+2023-11-18 09:32:18 | file1_dotAmount.txt | transaction from 11686-26400 to 36228-21595 900.5 | true 
+2023-11-18 09:32:18 | file2_commaAmount.txt | transaction from 67460-18136 to 14080-74983 120.43 | true 
+2023-11-18 09:32:18 | file3_invalidAccountFrom.txt | transaction from 11111-11111 to 68445-38134 20.0 | false Не существует банковского счета, с которого необходимо перевести сумму
+2023-11-18 09:32:18 | file4_InvalidAccountTo.txt | transaction from 68080-19294 to 00000-00000 100.0 | false Не существует банковского счета, на который необходимо перевести сумму
+2023-11-18 09:32:18 | file5_InvalidAmount.txt | transaction from 29866-14392 to 16932-95566 0.0 | false Некорректная сумма для перевода
+2023-11-18 09:32:18 | file6_InvalidAllFields.txt | transaction from null to null 0.0 | false Не существует банковского счета, с которого необходимо перевести сумму
+2023-11-18 09:32:18 | file7_noEnoughMoney.txt | transaction from 62003-46165 to 68445-38134 1000.0 | false Недостаточно средств для перевода
+2023-11-18 09:32:18 | file8_withLoremIpsum.txt | transaction from 29866-14392 to 22317-13426 300.25 | true 
+2023-11-18 10:23:27 | file1_dotAmount.txt | transaction from 11686-26400 to 36228-21595 900.5 | true 
+2023-11-18 10:23:27 | file2_commaAmount.txt | transaction from 67460-18136 to 14080-74983 120.43 | true 
+2023-11-18 10:23:27 | file3_invalidAccountFrom.txt | transaction from 11111-11111 to 68445-38134 20.0 | false Не существует банковского счета, с которого необходимо перевести сумму
+2023-11-18 10:23:27 | file4_InvalidAccountTo.txt | transaction from 68080-19294 to 00000-00000 100.0 | false Не существует банковского счета, на который необходимо перевести сумму
+2023-11-18 10:23:27 | file5_InvalidAmount.txt | transaction from 29866-14392 to 16932-95566 0.0 | false Некорректная сумма для перевода
+2023-11-18 10:23:27 | file6_InvalidAllFields.txt | transaction from null to null 0.0 | false Не существует банковского счета, с которого необходимо перевести сумму
+2023-11-18 10:23:27 | file7_noEnoughMoney.txt | transaction from 62003-46165 to 68445-38134 1000.0 | false Недостаточно средств для перевода
+2023-11-18 10:23:27 | file8_withLoremIpsum.txt | transaction from 29866-14392 to 22317-13426 300.25 | true 

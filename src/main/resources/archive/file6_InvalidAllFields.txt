@@ -1,0 +1,3 @@
+Номер счета с: invalidNumber
+Номер счета на: invalidNumber
+Сумма для перевода: invalidAmount
