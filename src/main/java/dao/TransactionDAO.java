@@ -58,7 +58,7 @@ public class TransactionDAO {
     public List<Transaction> getBetweenDates(LocalDateTime dateFrom, LocalDateTime dateTo) {
         List<Transaction> transactions = new ArrayList<>();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Transaction WHERE date > ? AND date < ?");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Transaction WHERE date >= ? AND date <= ?");
             preparedStatement.setTimestamp(1, Timestamp.valueOf(dateFrom));
             preparedStatement.setTimestamp(2, Timestamp.valueOf(dateTo));
             ResultSet resultSet = preparedStatement.executeQuery();

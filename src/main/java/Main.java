@@ -1,6 +1,7 @@
 import dao.TransactionDAO;
 import models.Transaction;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Scanner;
@@ -12,26 +13,26 @@ public class Main {
         System.out.println("2 - вызов операции вывода списка всех переводов из файла-отчета");
         System.out.println("3 - вызов операции вывода списка переводов в диапазоне дат");
         int inputString = scanner.nextInt();
-        if(inputString == 1){
+        if (inputString == 1) {
             parse();
-        }else if(inputString == 2){
+        } else if (inputString == 2) {
             getReportFile();
-        }else if(inputString == 3){
+        } else if (inputString == 3) {
             System.out.println("Введите диапазон дат для отчета транзакций");
             System.out.print("Введите дату с (YYYY-MM-DD): ");
-            LocalDateTime dateFrom = LocalDateTime.parse(scanner.next());
+            LocalDateTime dateFrom = LocalDate.parse(scanner.next()).atStartOfDay();
             System.out.print("Введите дату по (YYYY-MM-DD): ");
-            LocalDateTime dateTo = LocalDateTime.parse(scanner.next());
+            LocalDateTime dateTo = LocalDate.parse(scanner.next()).atTime(23, 59, 59);
             getNotesBetweenDatesFromReportFile(dateFrom, dateTo);
-        }else{
+        } else {
             System.out.println("Некорректный ввод");
         }
     }
 
-    private static void parse(){
+    private static void parse() {
         InputParser inputParser = new InputParser("src/main/resources/input", "src/main/resources/archive/");
         List<Transaction> transactions = inputParser.getTransactions();
-        if(transactions.isEmpty()){
+        if (transactions.isEmpty()) {
             System.out.println("Каталог input не содержит txt-файлов");
             return;
         }
@@ -40,7 +41,7 @@ public class Main {
         }
     }
 
-    private static void getReportFile(){
+    private static void getReportFile() {
         TransactionDAO transactionDAO = new TransactionDAO();
         List<Transaction> transactions = transactionDAO.getAll();
         for (Transaction transaction : transactions) {
@@ -48,7 +49,7 @@ public class Main {
         }
     }
 
-    private static void getNotesBetweenDatesFromReportFile(LocalDateTime dateFrom, LocalDateTime dateTo){
+    private static void getNotesBetweenDatesFromReportFile(LocalDateTime dateFrom, LocalDateTime dateTo) {
         TransactionDAO transactionDAO = new TransactionDAO();
         List<Transaction> transactions = transactionDAO.getBetweenDates(dateFrom, dateTo);
         for (Transaction transaction : transactions) {
