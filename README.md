@@ -95,5 +95,5 @@
 ```
 ![image](https://github.com/Kach-ZHBN/CourseProjectJavaCore/assets/124609149/8d8102e0-9159-4298-9944-4bf9ff00b17e)
 
-## Диаграмма классов с описанием зависимостей одних классов от других
-![image](https://github.com/Kach-ZHBN/CourseProjectJavaCore/assets/124609149/be564db7-8c5d-44b5-a366-03a8b2654367)
+## Диаграмма классов
+![diagramma drawio](https://github.com/Kach-ZHBN/CourseProjectJavaCore/assets/124609149/f2a08b77-d420-471e-8916-d39954ed389c)
